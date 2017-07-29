@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="entity.Reviews" table="reviews">
+		<id name="rid" column="rid" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="rcount" type="java.lang.Integer">
+			<column name="rcount" length="11"></column>
+		</property>
+		<property name="rsum" type="java.lang.Integer">
+			<column name="rsum" length="11"></column>
+		</property>
+		<property name="rmess" type="java.lang.String">
+			<column name="rmess" length="225"></column>
+		</property>
+		<!-- 配置多对一关联关系 -->
+		<many-to-one name="movie" class="entity.Movie" column="mno" cascade="all"></many-to-one>
+		<many-to-one name="user" class="entity.User" column="uid" cascade="all"></many-to-one>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+#MyEclipse Hibernate Properties
+#Sun Jul 02 07:02:54 CST 2017
+sessionFactoryName=util.HibernateSessionFactory
+genBasicCompId=false
+profile=
+daoSFId=
+version=4.1
+jndiPath=
+detectM2M=false
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=increment
+libInstallFolder=WebRoot/WEB-INF/lib
+addLibs2Project=false
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=/MovieWeb/hibernate.reveng.xml
+configFile=/MovieWeb/src/hibernate.cfg.xml
+createConfigFile=true
+addLibs2Classpath=false

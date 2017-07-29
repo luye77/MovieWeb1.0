@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="entity.User" table="user">
+		<id name="uid" column="uid" type="java.lang.Integer">
+			<generator class="increment"></generator>
+		</id>
+		<property name="uname" type="java.lang.String">
+			<column name="uname" length="255"></column>
+		</property>
+		<property name="upass" type="java.lang.String">
+			<column name="upass" length="255"></column>
+		</property>
+		<property name="uqq" type="java.lang.String">
+			<column name="uqq" length="255"></column>
+		</property>
+		<property name="uemail" type="java.lang.String">
+			<column name="uemail" length="255"></column>
+		</property>
+		<property name="utel" type="java.lang.String">
+			<column name="utel" length="255"></column>
+		</property>
+		<!-- 配置多对多关联关系 <set name="movie" table="reviews" inverse="true">
+			<key column="uid"></key>
+			<many-to-many class="entity.User" column="mno"/>
+		</set>-->
+		<set name="reviews" table="reviews">
+			<key column="uid"></key>
+			<one-to-many class="entity.Reviews"/>
+		</set>
+	</class>
+</hibernate-mapping>
